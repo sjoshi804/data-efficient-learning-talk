@@ -98,13 +98,14 @@
     <h2 class="title is-3 has-text-centered">Speakers</h2>
     <div class="columns is-centered">
       <div class="column is-three-quarters">
-        <div class="tile is-ancestor">
-          <div class="tile is-parent">
-            <article class="tile is-child box has-rounded-border">
+        <div class="columns is-multiline">
+          <!-- Siddharth Joshi's Tile -->
+          <div class="column is-half">
+            <article class="box has-rounded-border">
               <div class="columns is-vcentered">
                 <div class="column is-one-quarter has-text-centered">
                   <figure class="image is-128x128 is-inline-block">
-                    <img class="is-rounded-image" src="static/images/sid.jpg" alt="Siddharth Joshi">
+                    <img class="is-rounded" src="static/images/sid.jpg" alt="Siddharth Joshi">
                   </figure>
                 </div>
                 <div class="column">
@@ -117,12 +118,14 @@
               </div>
             </article>
           </div>
-          <div class="tile is-parent">
-            <article class="tile is-child box has-rounded-border">
+
+          <!-- Baharan Mirzasoleiman's Tile -->
+          <div class="column is-half">
+            <article class="box has-rounded-border">
               <div class="columns is-vcentered">
                 <div class="column is-one-quarter has-text-centered">
                   <figure class="image is-128x128 is-inline-block">
-                    <img class="is-rounded-image" src="static/images/baharan.jpg" alt="Baharan Mirzasoleiman">
+                    <img class="is-rounded" src="static/images/baharan.jpg" alt="Baharan Mirzasoleiman">
                   </figure>
                 </div>
                 <div class="column">
@@ -150,7 +153,7 @@
   height: 128px;
   overflow: hidden;
 }
-.is-rounded-image {
+.is-rounded {
   border-radius: 50%;
   object-fit: cover;
   width: 128px;
