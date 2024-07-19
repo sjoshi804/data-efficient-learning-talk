@@ -53,19 +53,19 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href="https://drive.google.com/file/d/1Q784t6-aRH_HX8aQGMOwogUWj-cH25P7/view?usp=sharing" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Slides</span>
+                  <span>Slides (Coming Soon)</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=KbEM0RROC9w&ab_channel=SiddharthJoshi" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <svg class="svg-inline--fa fa-youtube fa-w-18" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg>
                   </span>
-                  <span>Video</span>
+                  <span>Video Slides (Coming Soon)</span>
                 </a>
               </span>
             </div>
@@ -84,7 +84,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Self-supervised learning (SSL) learns high-quality representations from large pools of unlabeled training data. As datasets grow larger, it becomes crucial to identify the examples that contribute the most to learning such representations. This enables efficient SSL by reducing the volume of data required for learning high-quality representations. Nevertheless, quantifying the value of examples for SSL has remained an open question. In this work, we address this for the first time, by proving that examples that contribute the most to contrastive SSL are those that have the most similar augmentations to other examples, in expectation. We provide rigorous guarantees for the generalization performance of SSL on such subsets. Empirically, we discover, perhaps surprisingly, the subsets that contribute the most to SSL are those that contribute the least to supervised learning. Through extensive experiments, we show we can safely exclude 20% of examples from CIFAR100 and 40% from STL10 and TinyImageNet, without affecting downstream task performance. We also show that our subsets outperform random subsets by more than 2% on CIFAR10. We also demonstrate that these subsets are effective across contrastive SSL methods (evaluated on SimCLR, MoCo, SimSiam, BYOL).
+            Over the last decade, machine learning models have achieved remarkable success by learning from large amounts of data. This is best exemplified by the recent rise of foundation models that are trained on billions of examples. Training on massive data is, however, dependent on exceptionally large and expensive computational resources, and incurs substantial financial and environmental costs, due to the significant energy consumption. To reduce these costs, there has been a recent surge of interest in data-efficient learning techniques to train machine learning models on smaller subsets of carefully-chosen training examples. The field is, however, filled with many heuristics that seem contradictory at times, and is increasingly difficult and diverse to grasp for a non-informed audience. The goal of this tutorial will be to provide a unifying perspective, by discussing recent theoretically-rigorous approaches for data-efficient machine learning. We will discuss rigorous techniques for data-efficient supervised learning, and self-supervised contrastive pre-training. Then, we will focus on foundation models and discuss data selection for (pre-)training large vision-language models, such as CLIP. We will conclude by discussing challenge and providing guidelines for data-efficient training of large language models (LLMs).
           </p>
         </div>
       </div>
@@ -102,12 +102,12 @@
           <div class="tile is-parent">
             <article class="tile is-child box">
               <figure class="image is-128x128">
-                <img src="static/images/siddharth.jpg" alt="Siddharth Joshi">
+                <img src="static/images/sid.jpg" alt="Siddharth Joshi">
               </figure>
               <p class="title">Siddharth Joshi</p>
               <p class="subtitle">UCLA CS</p>
               <div class="content">
-                <p>Siddharth Joshi is a researcher at UCLA with a focus on self-supervised learning and data-efficient algorithms. His work aims to make machine learning more accessible and efficient.</p>
+                <p> <a href="https://sjoshi804.github.io/">Siddharth Joshi</a> is a PhD candidate at UCLA, advised by Professor Baharan Mirzasoleiman. He focuses on designing algorithms for data-efficient and robust learning with limited supervision. His research has advanced self-supervised and multimodal contrastive learning and explored data properties that enhance algorithm robustness. His work is recognized at prestigious conferences such as ICML'23a, ICML'23b, ICLR'24a, ICLR'24b, AISTATS'24, and SNN'22. Siddharth actively implements large-scale data-selection for vision-language pre-training and has received the Amazon Doctoral Student Fellowship.</p>
               </div>
             </article>
           </div>
@@ -119,7 +119,7 @@
               <p class="title">Baharan Mirzasoleiman</p>
               <p class="subtitle">UCLA CS</p>
               <div class="content">
-                <p>Baharan Mirzasoleiman is an Assistant Professor at UCLA specializing in scalable and efficient machine learning. Her research encompasses various aspects of large-scale learning and data-efficient algorithms.</p>
+                <p> <a href="https://baharanm.github.io/">Baharan Mirzasoleiman</a> is an Assistant Professor in the Computer Science Department at UCLA, leading the BigML research group. Her research focuses on enhancing the sustainability, reliability, and efficiency of machine learning by improving big data quality and developing rigorous data selection methods for robust learning. She also works on improving models and learning algorithms, with applications in medical diagnosis and environmental sensing. Before UCLA, Baharan was a postdoctoral fellow at Stanford University with Jure Leskovec and earned her Ph.D. at ETH Zurich under Andreas Krause, receiving an ETH medal for Outstanding Doctoral Thesis. She has been recognized as a Rising Star in EECS by MIT and has received an NSF Career Award, a UCLA Hellman Fellows Award, and an Amazon Research Award.</p>
               </div>
             </article>
           </div>
@@ -137,7 +137,7 @@
         <h2 class="title is-3">Contact</h2>
         <div class="content">
           <p>If you have any questions or need further information, feel free to reach out:</p>
-          <p>Email: <a href="mailto:sjoshi@cs.ucla.edu">sjoshi@cs.ucla.edu</a></p>
+          <p>Email: <a href="mailto:sjoshi@cs.ucla.edu">sjoshi804@cs.ucla.edu</a></p>
         </div>
       </div>
     </div>
