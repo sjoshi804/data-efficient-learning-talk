@@ -102,13 +102,15 @@
           <!-- Siddharth Joshi's Tile -->
           <div class="column is-half">
             <article class="box has-rounded-border">
-              <figure class="image is-128x128 is-inline-block is-centered">
-                <img class="is-rounded-image is-centered" src="static/images/sid.jpg" alt="Siddharth Joshi">
-              </figure>
-              <div class="content has-text-centered">
+              <div class="has-text-centered">
+                <figure class="image is-128x128 is-inline-block">
+                  <img class="is-rounded-image" src="static/images/sid.jpg" alt="Siddharth Joshi">
+                </figure>
                 <p class="title">Siddharth Joshi</p>
                 <p class="subtitle">UCLA CS</p>
-                <p><a href="https://sjoshi804.github.io/">Siddharth Joshi</a> is a PhD candidate at UCLA, advised by Professor Baharan Mirzasoleiman. He focuses on designing algorithms for data-efficient and robust learning with limited supervision. His research has advanced self-supervised and multimodal contrastive learning and explored data properties that enhance algorithm robustness. His work is recognized at prestigious conferences such as ICML'23a, ICML'23b, ICLR'24a, ICLR'24b, AISTATS'24, and SNN'22. Siddharth actively implements large-scale data-selection for vision-language pre-training and has received the Amazon Doctoral Student Fellowship.</p>
+                <div class="content">
+                  <p><a href="https://sjoshi804.github.io/">Siddharth Joshi</a> is a PhD candidate at UCLA, advised by Professor Baharan Mirzasoleiman. He focuses on designing algorithms for data-efficient and robust learning with limited supervision. His research has advanced self-supervised and multimodal contrastive learning and explored data properties that enhance algorithm robustness. His work is recognized at prestigious conferences such as ICML'23a, ICML'23b, ICLR'24a, ICLR'24b, AISTATS'24, and SNN'22. Siddharth actively implements large-scale data-selection for vision-language pre-training and has received the Amazon Doctoral Student Fellowship.</p>
+                </div>
               </div>
             </article>
           </div>
@@ -116,13 +118,15 @@
           <!-- Baharan Mirzasoleiman's Tile -->
           <div class="column is-half">
             <article class="box has-rounded-border">
-              <figure class="image is-128x128 is-inline-block is-centered">
-                <img class="is-rounded-image is-centered" src="static/images/baharan.jpg" alt="Baharan Mirzasoleiman">
-              </figure>
-              <div class="content has-text-centered">
+              <div class="has-text-centered">
+                <figure class="image is-128x128 is-inline-block">
+                  <img class="is-rounded-image" src="static/images/baharan.jpg" alt="Baharan Mirzasoleiman">
+                </figure>
                 <p class="title">Baharan Mirzasoleiman</p>
                 <p class="subtitle">UCLA CS</p>
-                <p><a href="https://baharanm.github.io/">Baharan Mirzasoleiman</a> is an Assistant Professor in the Computer Science Department at UCLA, leading the BigML research group. Her research focuses on enhancing the sustainability, reliability, and efficiency of machine learning by improving big data quality and developing rigorous data selection methods for robust learning. She also works on improving models and learning algorithms, with applications in medical diagnosis and environmental sensing. Before UCLA, Baharan was a postdoctoral fellow at Stanford University with Jure Leskovec and earned her Ph.D. at ETH Zurich under Andreas Krause, receiving an ETH medal for Outstanding Doctoral Thesis. She has been recognized as a Rising Star in EECS by MIT and has received an NSF Career Award, a UCLA Hellman Fellows Award, and an Amazon Research Award.</p>
+                <div class="content">
+                  <p><a href="https://baharanm.github.io/">Baharan Mirzasoleiman</a> is an Assistant Professor in the Computer Science Department at UCLA, leading the BigML research group. Her research focuses on enhancing the sustainability, reliability, and efficiency of machine learning by improving big data quality and developing rigorous data selection methods for robust learning. She also works on improving models and learning algorithms, with applications in medical diagnosis and environmental sensing. Before UCLA, Baharan was a postdoctoral fellow at Stanford University with Jure Leskovec and earned her Ph.D. at ETH Zurich under Andreas Krause, receiving an ETH medal for Outstanding Doctoral Thesis. She has been recognized as a Rising Star in EECS by MIT and has received an NSF Career Award, a UCLA Hellman Fellows Award, and an Amazon Research Award.</p>
+                </div>
               </div>
             </article>
           </div>
@@ -131,6 +135,7 @@
     </div>
   </div>
 </section>
+
 
 
 <style>
@@ -148,6 +153,26 @@
   width: 128px;
   height: 128px;
 }
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.image {
+  margin-bottom: 1rem;
+}
+
+.title, .subtitle {
+  margin: 0.5rem 0;
+}
+
+.content {
+  margin-top: 1rem;
+}
+
 </style>
 
 
