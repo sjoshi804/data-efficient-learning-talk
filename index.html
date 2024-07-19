@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Contrastive Learning, Data-Efficient, Self-Supervised Learning">
+  <meta property="og:title" content="ICML 2024 Tutorial: Data-Efficient Contrastive Learning"/>
+  <meta property="og:description" content="Join our tutorial at ICML 2024 on how to choose good subsets of data to train on that allow contrastive learning on the subset to match the performance on the full data"/>
+  <meta property="og:url" content="https://sjoshi804.github.io"/>
+
+  <meta name="twitter:title" content="ICML 2024 Tutorial: Data-Efficient Contrastive Learning">
+  <meta name="twitter:description" content="Tutorial Page for Data-Efficient Contrastive Learning (ICML 2024)">
+  <meta name="twitter:image" content="static/images/discard-pct.png">
+  <meta name="keywords" content="contrastive learning data-efficient multimodal learning SSL">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ICML 2024 Tutorial: Data-Efficient Contrastive Learning</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">ICML 2024 Tutorial: Data-Efficient Contrastive Learning</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://sjoshi804.github.io" target="_blank">Siddharth Joshi</a>,
+            </span>
+            <span class="author-block">
+              <a href="http://web.cs.ucla.edu/~baharan/index.htm" target="_blank">Baharan Mirzasoleiman</a>
+            </span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">UCLA CS <br> <b>ICML 2024</b></span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://drive.google.com/file/d/1Q784t6-aRH_HX8aQGMOwogUWj-cH25P7/view?usp=sharing" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Slides</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=KbEM0RROC9w&ab_channel=SiddharthJoshi" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <svg class="svg-inline--fa fa-youtube fa-w-18" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Self-supervised learning (SSL) learns high-quality representations from large pools of unlabeled training data. As datasets grow larger, it becomes crucial to identify the examples that contribute the most to learning such representations. This enables efficient SSL by reducing the volume of data required for learning high-quality representations. Nevertheless, quantifying the value of examples for SSL has remained an open question. In this work, we address this for the first time, by proving that examples that contribute the most to contrastive SSL are those that have the most similar augmentations to other examples, in expectation. We provide rigorous guarantees for the generalization performance of SSL on such subsets. Empirically, we discover, perhaps surprisingly, the subsets that contribute the most to SSL are those that contribute the least to supervised learning. Through extensive experiments, we show we can safely exclude 20% of examples from CIFAR100 and 40% from STL10 and TinyImageNet, without affecting downstream task performance. We also show that our subsets outperform random subsets by more than 2% on CIFAR10. We also demonstrate that these subsets are effective across contrastive SSL methods (evaluated on SimCLR, MoCo, SimSiam, BYOL).
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tutorial Speakers -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Speakers</h2>
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <div class="tile is-ancestor">
+          <div class="tile is-parent">
+            <article class="tile is-child box">
+              <figure class="image is-128x128">
+                <img src="static/images/siddharth.jpg" alt="Siddharth Joshi">
+              </figure>
+              <p class="title">Siddharth Joshi</p>
+              <p class="subtitle">UCLA CS</p>
+              <div class="content">
+                <p>Siddharth Joshi is a researcher at UCLA with a focus on self-supervised learning and data-efficient algorithms. His work aims to make machine learning more accessible and efficient.</p>
+              </div>
+            </article>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child box">
+              <figure class="image is-128x128">
+                <img src="static/images/baharan.jpg" alt="Baharan Mirzasoleiman">
+              </figure>
+              <p class="title">Baharan Mirzasoleiman</p>
+              <p class="subtitle">UCLA CS</p>
+              <div class="content">
+                <p>Baharan Mirzasoleiman is an Assistant Professor at UCLA specializing in scalable and efficient machine learning. Her research encompasses various aspects of large-scale learning and data-efficient algorithms.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact section -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Contact</h2>
+        <div class="content">
+          <p>If you have any questions or need further information, feel free to reach out:</p>
+          <p>Email: <a href="mailto:sjoshi@cs.ucla.edu">sjoshi@cs.ucla.edu</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
