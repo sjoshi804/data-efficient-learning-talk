@@ -95,31 +95,43 @@
 <!-- Tutorial Speakers -->
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3">Speakers</h2>
+    <h2 class="title is-3 has-text-centered">Speakers</h2>
     <div class="columns is-centered">
-      <div class="column is-half">
-        <div class="tile is-ancestor">
+      <div class="column is-three-quarters">
+        <div class="tile is-ancestor is-vertical">
           <div class="tile is-parent">
-            <article class="tile is-child box">
-              <figure class="image is-128x128">
-                <img src="static/images/sid.jpg" alt="Siddharth Joshi">
-              </figure>
-              <p class="title">Siddharth Joshi</p>
-              <p class="subtitle">UCLA CS</p>
-              <div class="content">
-                <p> <a href="https://sjoshi804.github.io/">Siddharth Joshi</a> is a PhD candidate at UCLA, advised by Professor Baharan Mirzasoleiman. He focuses on designing algorithms for data-efficient and robust learning with limited supervision. His research has advanced self-supervised and multimodal contrastive learning and explored data properties that enhance algorithm robustness. His work is recognized at prestigious conferences such as ICML'23a, ICML'23b, ICLR'24a, ICLR'24b, AISTATS'24, and SNN'22. Siddharth actively implements large-scale data-selection for vision-language pre-training and has received the Amazon Doctoral Student Fellowship.</p>
+            <article class="tile is-child box has-rounded-border">
+              <div class="columns is-vcentered">
+                <div class="column is-one-quarter has-text-centered">
+                  <figure class="image is-128x128 is-inline-block">
+                    <img class="is-rounded" src="static/images/sid.jpg" alt="Siddharth Joshi">
+                  </figure>
+                </div>
+                <div class="column">
+                  <p class="title">Siddharth Joshi</p>
+                  <p class="subtitle">UCLA CS</p>
+                  <div class="content">
+                    <p><a href="https://sjoshi804.github.io/">Siddharth Joshi</a> is a PhD candidate at UCLA, advised by Professor Baharan Mirzasoleiman. He focuses on designing algorithms for data-efficient and robust learning with limited supervision. His research has advanced self-supervised and multimodal contrastive learning and explored data properties that enhance algorithm robustness. His work is recognized at prestigious conferences such as ICML'23a, ICML'23b, ICLR'24a, ICLR'24b, AISTATS'24, and SNN'22. Siddharth actively implements large-scale data-selection for vision-language pre-training and has received the Amazon Doctoral Student Fellowship.</p>
+                  </div>
+                </div>
               </div>
             </article>
           </div>
           <div class="tile is-parent">
-            <article class="tile is-child box">
-              <figure class="image is-128x128">
-                <img src="static/images/baharan.jpg" alt="Baharan Mirzasoleiman">
-              </figure>
-              <p class="title">Baharan Mirzasoleiman</p>
-              <p class="subtitle">UCLA CS</p>
-              <div class="content">
-                <p> <a href="https://baharanm.github.io/">Baharan Mirzasoleiman</a> is an Assistant Professor in the Computer Science Department at UCLA, leading the BigML research group. Her research focuses on enhancing the sustainability, reliability, and efficiency of machine learning by improving big data quality and developing rigorous data selection methods for robust learning. She also works on improving models and learning algorithms, with applications in medical diagnosis and environmental sensing. Before UCLA, Baharan was a postdoctoral fellow at Stanford University with Jure Leskovec and earned her Ph.D. at ETH Zurich under Andreas Krause, receiving an ETH medal for Outstanding Doctoral Thesis. She has been recognized as a Rising Star in EECS by MIT and has received an NSF Career Award, a UCLA Hellman Fellows Award, and an Amazon Research Award.</p>
+            <article class="tile is-child box has-rounded-border">
+              <div class="columns is-vcentered">
+                <div class="column is-one-quarter has-text-centered">
+                  <figure class="image is-128x128 is-inline-block">
+                    <img class="is-rounded" src="static/images/baharan.jpg" alt="Baharan Mirzasoleiman">
+                  </figure>
+                </div>
+                <div class="column">
+                  <p class="title">Baharan Mirzasoleiman</p>
+                  <p class="subtitle">UCLA CS</p>
+                  <div class="content">
+                    <p><a href="https://baharanm.github.io/">Baharan Mirzasoleiman</a> is an Assistant Professor in the Computer Science Department at UCLA, leading the BigML research group. Her research focuses on enhancing the sustainability, reliability, and efficiency of machine learning by improving big data quality and developing rigorous data selection methods for robust learning. She also works on improving models and learning algorithms, with applications in medical diagnosis and environmental sensing. Before UCLA, Baharan was a postdoctoral fellow at Stanford University with Jure Leskovec and earned her Ph.D. at ETH Zurich under Andreas Krause, receiving an ETH medal for Outstanding Doctoral Thesis. She has been recognized as a Rising Star in EECS by MIT and has received an NSF Career Award, a UCLA Hellman Fellows Award, and an Amazon Research Award.</p>
+                  </div>
+                </div>
               </div>
             </article>
           </div>
@@ -128,6 +140,24 @@
     </div>
   </div>
 </section>
+
+<style>
+.has-rounded-border {
+  border-radius: 10px;
+}
+.image.is-128x128 {
+  width: 128px;
+  height: 128px;
+  overflow: hidden;
+}
+.is-rounded {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 128px;
+  height: 128px;
+}
+</style>
+
 
 <!-- Contact section -->
 <section class="section hero is-light">
